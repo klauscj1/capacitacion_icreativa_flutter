@@ -1,7 +1,9 @@
 import 'package:clase_2/ui/pages/con_estado.dart';
+import 'package:clase_2/ui/pages/container_page.dart';
 import 'package:clase_2/ui/pages/home_page.dart';
 import 'package:clase_2/ui/pages/list_page.dart';
 import 'package:clase_2/ui/pages/sin_estado.dart';
+import 'package:clase_2/ui/widgets/menu_item_widget.dart';
 import 'package:flutter/material.dart';
 
 class MenuPage extends StatelessWidget {
@@ -14,125 +16,37 @@ class MenuPage extends StatelessWidget {
       body: Padding(
         padding:
             const EdgeInsets.only(top: 12, left: 10, right: 10, bottom: 20),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
+        child: ListView(
           children: [
-            Container(
-              color: Colors.blue,
-              child: ListTile(
-                title: Text(
-                  'Home page',
-                  style: TextStyle(
-                      color: Colors.white, fontWeight: FontWeight.bold),
-                ),
-                leading: Text(
-                  'H',
-                  style: TextStyle(
-                      color: Colors.white, fontWeight: FontWeight.bold),
-                ),
-                trailing: Icon(
-                  Icons.chevron_right,
-                  color: Colors.white,
-                ),
-                subtitle: Text(
-                  'Este es el primer ejemplo',
-                  style: TextStyle(color: Colors.white),
-                ),
-                onTap: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => HomePage()));
-                },
-              ),
+            MenuItem(
+              pagina: HomePage(),
+              leading: 'HO',
+              titulo: 'Home Page',
+              subtitulo: 'Primer ejecicio',
             ),
-            SizedBox(
-              height: 10,
+            MenuItem(
+              pagina: ListPage(),
+              leading: 'LP',
+              titulo: 'List Page',
+              subtitulo: 'segundo ejecicio',
             ),
-            Container(
-              color: Colors.blue,
-              child: ListTile(
-                title: Text(
-                  'List page',
-                  style: TextStyle(
-                      color: Colors.white, fontWeight: FontWeight.bold),
-                ),
-                leading: Text(
-                  'L',
-                  style: TextStyle(
-                      color: Colors.white, fontWeight: FontWeight.bold),
-                ),
-                trailing: Icon(
-                  Icons.chevron_right,
-                  color: Colors.white,
-                ),
-                subtitle: Text(
-                  'Este es el primer ejemplo',
-                  style: TextStyle(color: Colors.white),
-                ),
-                onTap: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => ListPage()));
-                },
-              ),
+            MenuItem(
+              pagina: SinEstado(),
+              leading: 'WS',
+              titulo: 'Widget sin estado',
+              subtitulo: 'Tercer ejecicio',
             ),
-            SizedBox(
-              height: 10,
+            MenuItem(
+              pagina: ConEstado(),
+              leading: 'WC',
+              titulo: 'Widget con estado',
+              subtitulo: 'cuarto ejecicio',
             ),
-            Container(
-              color: Colors.blue,
-              child: ListTile(
-                title: Text(
-                  'Widget sin estado',
-                  style: TextStyle(
-                      color: Colors.white, fontWeight: FontWeight.bold),
-                ),
-                leading: Text(
-                  'WS',
-                  style: TextStyle(
-                      color: Colors.white, fontWeight: FontWeight.bold),
-                ),
-                trailing: Icon(
-                  Icons.chevron_right,
-                  color: Colors.white,
-                ),
-                subtitle: Text(
-                  'Este es el primer ejemplo',
-                  style: TextStyle(color: Colors.white),
-                ),
-                onTap: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => SinEstado()));
-                },
-              ),
-            ),
-            SizedBox(
-              height: 10,
-            ),
-            Container(
-              color: Colors.blue,
-              child: ListTile(
-                title: Text(
-                  'Widget con estado',
-                  style: TextStyle(
-                      color: Colors.white, fontWeight: FontWeight.bold),
-                ),
-                leading: Text(
-                  'WC',
-                  style: TextStyle(
-                      color: Colors.white, fontWeight: FontWeight.bold),
-                ),
-                trailing: Icon(
-                  Icons.chevron_right,
-                  color: Colors.white,
-                ),
-                subtitle: Text(
-                  'Este es el primer ejemplo',
-                  style: TextStyle(color: Colors.white),
-                ),
-                onTap: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => ConEstado()));
-                },
-              ),
+            MenuItem(
+              pagina: ContainerPage(),
+              leading: 'CP',
+              titulo: 'Container widget',
+              subtitulo: 'quinto ejecicio',
             ),
           ],
         ),
