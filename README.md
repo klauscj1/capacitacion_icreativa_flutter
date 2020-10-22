@@ -1,16 +1,8 @@
-# clase_2
+# Aplicacion para ejemplos de flutter para capacitacion de icreativa
 
-A new Flutter project.
+Es un proyecto de flutter con varios ejemplos.
 
-## Getting Started
+## Como iniciar
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- Clonar el repositorio y abrir el proyecto con VSCode
+- Ir al archivo pubspec.yaml y dar un save
