@@ -1,3 +1,4 @@
+import 'package:clase_2/ui/pages/calculador_menu.dart';
 import 'package:clase_2/ui/pages/con_estado.dart';
 import 'package:clase_2/ui/pages/container_page.dart';
 import 'package:clase_2/ui/pages/home_page.dart';
@@ -47,6 +48,12 @@ class MenuPage extends StatelessWidget {
               leading: 'CP',
               titulo: 'Container widget',
               subtitulo: 'quinto ejecicio',
+            ),
+            MenuItem(
+              pagina: CalculadoraMenu(),
+              leading: 'CA',
+              titulo: 'Calculadoras ',
+              subtitulo: 'Tarea 1',
             ),
           ],
         ),
