@@ -66,9 +66,6 @@ class _CalculadoraGabrielState extends State<CalculadoraGabriel> {
                 ),
               ],
             ),
-            SizedBox(
-              width: 10,
-            ),
             Row(
               children: [
                 FloatingActionButton(
@@ -106,9 +103,6 @@ class _CalculadoraGabrielState extends State<CalculadoraGabriel> {
                 ),
               ],
             ),
-            SizedBox(
-              width: 10,
-            ),
             Row(
               children: [
                 FloatingActionButton(
@@ -145,9 +139,6 @@ class _CalculadoraGabrielState extends State<CalculadoraGabriel> {
                   child: Text('9'),
                 ),
               ],
-            ),
-            SizedBox(
-              width: 10,
             ),
             Row(
               children: [
@@ -189,9 +180,6 @@ class _CalculadoraGabrielState extends State<CalculadoraGabriel> {
                 ),
               ],
             ),
-            SizedBox(
-              width: 10,
-            ),
             Row(
               children: [
                 FloatingActionButton(
@@ -228,9 +216,6 @@ class _CalculadoraGabrielState extends State<CalculadoraGabriel> {
                   child: Text('*'),
                 ),
               ],
-            ),
-            SizedBox(
-              width: 10,
             ),
             Row(
               children: [
