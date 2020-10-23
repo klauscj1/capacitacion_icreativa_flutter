@@ -22,13 +22,19 @@ class _CalculadoraGabrielState extends State<CalculadoraGabriel> {
       body: Center(
         child: Column(
           children: [
-            Text(''),
+            SizedBox(
+              height: 5,
+            ),
             Text('$num1'),
             Text('$op'),
             Text('$num2'),
-            Text(''),
+            SizedBox(
+              height: 5,
+            ),
             Text('$respuesta'),
-            Text(''),
+            SizedBox(
+              height: 5,
+            ),
             Row(
               children: [
                 FloatingActionButton(

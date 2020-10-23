@@ -6,14 +6,16 @@ class CalculadoraEdison extends StatefulWidget {
 }
 
 class _CalculadoraState extends State<CalculadoraEdison> {
-
   Widget crearBoton(String btntxt, String hero) {
     return FloatingActionButton(
       heroTag: '$hero',
       onPressed: () {
         calcular('$btntxt');
       },
-      child: Text('$btntxt',style: TextStyle(fontSize: 30),),
+      child: Text(
+        '$btntxt',
+        style: TextStyle(fontSize: 30),
+      ),
     );
   }
 

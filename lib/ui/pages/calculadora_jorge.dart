@@ -17,38 +17,34 @@ class _CalculadoraJorgeState extends State<CalculadoraJorge> {
       if (buttonText == "C") {
         equation = "0";
         result = "0";
-        double equationFonSize = 38.0;
-        double resultFonSize = 48.0;
-      } 
-      else if (buttonText == "⌫") {
-        double equationFonSize = 48.0;
-        double resultFonSize = 38.0;
+        // double equationFonSize = 38.0;
+        // double resultFonSize = 48.0;
+      } else if (buttonText == "⌫") {
+        // double equationFonSize = 48.0;
+        // double resultFonSize = 38.0;
         equation = equation.substring(0, equation.length - 1);
         if (equation == "") {
           equation = "0";
         }
-      } 
-      else if (buttonText == "=") {
-        double equationFonSize = 38.0;
-        double resultFonSize = 48.0;
+      } else if (buttonText == "=") {
+        // double equationFonSize = 38.0;
+        // double resultFonSize = 48.0;
 
         expression = equation;
         expression = expression.replaceAll('×', '*');
         expression = expression.replaceAll('÷', '/');
-        try{
+        try {
           Parser p = new Parser();
           Expression exp = p.parse(expression);
 
           ContextModel contextModel = ContextModel();
           result = '${exp.evaluate(EvaluationType.REAL, contextModel)}';
-        }catch(e){
-          result ="Error";
-
+        } catch (e) {
+          result = "Error";
         }
-      } 
-      else {
-        double equationFonSize = 48.0;
-        double resultFonSize = 38.0;
+      } else {
+        // double equationFonSize = 48.0;
+        // double resultFonSize = 38.0;
         if (equation == "0") {
           equation = buttonText;
         } else {

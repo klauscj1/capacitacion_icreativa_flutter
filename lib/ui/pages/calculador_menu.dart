@@ -5,6 +5,8 @@ import 'package:clase_2/ui/pages/calculadora_lina.dart';
 import 'package:clase_2/ui/widgets/menu_item_widget.dart';
 import 'package:flutter/material.dart';
 
+import 'calculadora_claus.dart';
+
 class CalculadoraMenu extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -40,6 +42,12 @@ class CalculadoraMenu extends StatelessWidget {
               leading: 'JA',
               titulo: 'Jorge Arevalo',
               subtitulo: 'Jorge Arevalo',
+            ),
+            MenuItem(
+              pagina: CalculadorClaus(),
+              leading: 'JA',
+              titulo: 'Claus Chocho',
+              subtitulo: 'Claus Chocho',
             ),
           ],
         ),
