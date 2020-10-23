@@ -1,5 +1,3 @@
-import 'dart:ffi';
-
 import 'package:flutter/material.dart';
 
 class CalculadoraGabriel extends StatefulWidget {
@@ -45,7 +43,6 @@ class _CalculadoraGabrielState extends State<CalculadoraGabriel> {
                       respuesta = '';
                     }
                     setState(() {});
-                    //print('el contador ahora es: $contador');
                   },
                   child: Text('1'),
                 ),
@@ -64,7 +61,6 @@ class _CalculadoraGabrielState extends State<CalculadoraGabriel> {
                       respuesta = '';
                     }
                     setState(() {});
-                    //print('el contador ahora es: $contador');
                   },
                   child: Text('2'),
                 ),
@@ -83,7 +79,6 @@ class _CalculadoraGabrielState extends State<CalculadoraGabriel> {
                       respuesta = '';
                     }
                     setState(() {});
-                    //print('el contador ahora es: $contador');
                   },
                   child: Text('3'),
                 ),
@@ -103,7 +98,6 @@ class _CalculadoraGabrielState extends State<CalculadoraGabriel> {
                       respuesta = '';
                     }
                     setState(() {});
-                    //print('el contador ahora es: $contador');
                   },
                   child: Text('4'),
                 ),
@@ -122,7 +116,6 @@ class _CalculadoraGabrielState extends State<CalculadoraGabriel> {
                       respuesta = '';
                     }
                     setState(() {});
-                    //print('el contador ahora es: $contador');
                   },
                   child: Text('5'),
                 ),
@@ -141,7 +134,6 @@ class _CalculadoraGabrielState extends State<CalculadoraGabriel> {
                       respuesta = '';
                     }
                     setState(() {});
-                    //print('el contador ahora es: $contador');
                   },
                   child: Text('6'),
                 ),
@@ -161,7 +153,6 @@ class _CalculadoraGabrielState extends State<CalculadoraGabriel> {
                       respuesta = '';
                     }
                     setState(() {});
-                    //print('el contador ahora es: $contador');
                   },
                   child: Text('7'),
                 ),
@@ -180,7 +171,6 @@ class _CalculadoraGabrielState extends State<CalculadoraGabriel> {
                       respuesta = '';
                     }
                     setState(() {});
-                    //print('el contador ahora es: $contador');
                   },
                   child: Text('8'),
                 ),
@@ -199,7 +189,6 @@ class _CalculadoraGabrielState extends State<CalculadoraGabriel> {
                       respuesta = '';
                     }
                     setState(() {});
-                    //print('el contador ahora es: $contador');
                   },
                   child: Text('9'),
                 ),
@@ -216,7 +205,6 @@ class _CalculadoraGabrielState extends State<CalculadoraGabriel> {
                       num2 = num1.substring(0, num1.length - 1);
                     }
                     setState(() {});
-                    //print('el contador ahora es: $contador');
                   },
                   child: Text('C'),
                 ),
@@ -231,7 +219,6 @@ class _CalculadoraGabrielState extends State<CalculadoraGabriel> {
                     op = '';
                     respuesta = '';
                     setState(() {});
-                    //print('el contador ahora es: $contador');
                   },
                   child: Text('CA'),
                 ),
@@ -247,7 +234,6 @@ class _CalculadoraGabrielState extends State<CalculadoraGabriel> {
                       num2 = num2 + '0';
                     }
                     setState(() {});
-                    //print('el contador ahora es: $contador');
                   },
                   child: Text('0'),
                 ),
@@ -261,7 +247,6 @@ class _CalculadoraGabrielState extends State<CalculadoraGabriel> {
                     op = '+';
                     bandok = false;
                     setState(() {});
-                    //print('el contador ahora es: $contador');
                   },
                   child: Text('+'),
                 ),
@@ -274,7 +259,6 @@ class _CalculadoraGabrielState extends State<CalculadoraGabriel> {
                     op = '-';
                     bandok = false;
                     setState(() {});
-                    //print('el contador ahora es: $contador');
                   },
                   child: Text('-'),
                 ),
@@ -287,7 +271,6 @@ class _CalculadoraGabrielState extends State<CalculadoraGabriel> {
                     op = '*';
                     bandok = false;
                     setState(() {});
-                    //print('el contador ahora es: $contador');
                   },
                   child: Text('*'),
                 ),
@@ -301,7 +284,6 @@ class _CalculadoraGabrielState extends State<CalculadoraGabriel> {
                     op = '/';
                     bandok = false;
                     setState(() {});
-                    //print('el contador ahora es: $contador');
                   },
                   child: Text('/'),
                 ),
@@ -357,7 +339,6 @@ class _CalculadoraGabrielState extends State<CalculadoraGabriel> {
                     bandok = true;
                     op = '';
                     bandr = false;
-                    //print('el contador ahora es: $contador');
                   },
                   child: Text('='),
                 ),
