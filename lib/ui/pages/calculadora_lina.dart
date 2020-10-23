@@ -2,21 +2,21 @@ import 'package:flutter/material.dart';
 
 class CalculadoraLina extends StatefulWidget {
   @override
-  CalculadoraLinaState createState() => new CalculadoraLinaState();
+  _CalculadoraLinaState createState() => new _CalculadoraLinaState();
 }
 
-class CalculadoraLinaState extends State<CalculadoraLina> {
-  double num1;
-  double num2;
-  String signoOperador;
-  String textoSalida = "";
-  String resultado;
+class _CalculadoraLinaState extends State<CalculadoraLina> {
+  double num1 = 0.0;
+  double num2 = 0.0;
+  String signoOperador = "";
+  String textoSalida = "0";
+  String resultado = "0";
 
   clickButton(String buttonText) {
-    if (buttonText == "LIMPIAR") {
+    if (buttonText == "CLEAR") {
       resultado = "0";
-      num1 = 0;
-      num2 = 0;
+      num1 = 0.0;
+      num2 = 0.0;
       signoOperador = "";
     } else if (buttonText == "+" ||
         buttonText == "-" ||
@@ -67,14 +67,9 @@ class CalculadoraLinaState extends State<CalculadoraLina> {
     return new Expanded(
       child: new OutlineButton(
         padding: new EdgeInsets.all(25.0),
-        child: Container(
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(80),
-          ),
-          child: new Text(
-            buttonText,
-            style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold),
-          ),
+        child: new Text(
+          buttonText,
+          style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold),
         ),
         onPressed: () => clickButton(buttonText),
       ),
@@ -101,8 +96,7 @@ class CalculadoraLinaState extends State<CalculadoraLina> {
                           fontWeight: FontWeight.bold,
                         ))),
                 new Expanded(
-                  child:
-                      new Divider(), //////////////////////////////Comentar*******************************,
+                  child: new Divider(),
                 ),
                 new Column(children: [
                   new Row(children: [
@@ -130,7 +124,7 @@ class CalculadoraLinaState extends State<CalculadoraLina> {
                     buildButton("+")
                   ]),
                   new Row(children: [
-                    buildButton("LIMPIAR"),
+                    buildButton("CLEAR"),
                     buildButton("="),
                   ])
                 ])
