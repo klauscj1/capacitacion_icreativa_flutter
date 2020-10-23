@@ -64,6 +64,18 @@ class _CalculadoraGabrielState extends State<CalculadoraGabriel> {
                   },
                   child: Text('3'),
                 ),
+                SizedBox(
+                  width: 20,
+                ),
+                FloatingActionButton(
+                  heroTag: '+',
+                  onPressed: () {
+                    op = '+';
+                    bandok = false;
+                    setState(() {});
+                  },
+                  child: Text('+'),
+                ),
               ],
             ),
             Row(
@@ -101,6 +113,18 @@ class _CalculadoraGabrielState extends State<CalculadoraGabriel> {
                   },
                   child: Text('6'),
                 ),
+                SizedBox(
+                  width: 20,
+                ),
+                FloatingActionButton(
+                  heroTag: '-',
+                  onPressed: () {
+                    op = '-';
+                    bandok = false;
+                    setState(() {});
+                  },
+                  child: Text('-'),
+                ),
               ],
             ),
             Row(
@@ -137,6 +161,18 @@ class _CalculadoraGabrielState extends State<CalculadoraGabriel> {
                     setState(() {});
                   },
                   child: Text('9'),
+                ),
+                SizedBox(
+                  width: 20,
+                ),
+                FloatingActionButton(
+                  heroTag: '*',
+                  onPressed: () {
+                    op = '*';
+                    bandok = false;
+                    setState(() {});
+                  },
+                  child: Text('*'),
                 ),
               ],
             ),
@@ -178,47 +214,9 @@ class _CalculadoraGabrielState extends State<CalculadoraGabriel> {
                   },
                   child: Text('0'),
                 ),
-              ],
-            ),
-            Row(
-              children: [
-                FloatingActionButton(
-                  heroTag: '+',
-                  onPressed: () {
-                    op = '+';
-                    bandok = false;
-                    setState(() {});
-                  },
-                  child: Text('+'),
-                ),
                 SizedBox(
-                  width: 10,
+                  width: 20,
                 ),
-                FloatingActionButton(
-                  heroTag: '-',
-                  onPressed: () {
-                    op = '-';
-                    bandok = false;
-                    setState(() {});
-                  },
-                  child: Text('-'),
-                ),
-                SizedBox(
-                  width: 10,
-                ),
-                FloatingActionButton(
-                  heroTag: '*',
-                  onPressed: () {
-                    op = '*';
-                    bandok = false;
-                    setState(() {});
-                  },
-                  child: Text('*'),
-                ),
-              ],
-            ),
-            Row(
-              children: [
                 FloatingActionButton(
                   heroTag: '/',
                   onPressed: () {
@@ -228,9 +226,10 @@ class _CalculadoraGabrielState extends State<CalculadoraGabriel> {
                   },
                   child: Text('/'),
                 ),
-                SizedBox(
-                  width: 10,
-                ),
+              ],
+            ),
+            Row(
+              children: [
                 FloatingActionButton(
                   heroTag: '=',
                   onPressed: () {
