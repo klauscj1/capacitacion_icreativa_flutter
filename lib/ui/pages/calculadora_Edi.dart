@@ -6,17 +6,36 @@ class CalculadoraEdison extends StatefulWidget {
 }
 
 class _CalculadoraState extends State<CalculadoraEdison> {
-  // creamos las variables
 
-  int resultado = 0;
-  String valor_ingresado = '';
+  Widget crearBoton(String btntxt, String hero) {
+    return FloatingActionButton(
+      heroTag: '$hero',
+      onPressed: () {
+        calcular('$btntxt');
+      },
+      child: Text('$btntxt',style: TextStyle(fontSize: 30),),
+    );
+  }
+
+  Widget espaciadoBoton() {
+    return SizedBox(
+      width: 10,
+    );
+  }
+
+  Widget espaciadoSaltos() {
+    return SizedBox(
+      height: 10,
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.black,
       appBar: AppBar(
         centerTitle: true,
-        title: Text('Calculadora EDIS'),
+        title: Text('Calculadora'),
         backgroundColor: Colors.black,
       ),
       body: Center(
@@ -30,14 +49,16 @@ class _CalculadoraState extends State<CalculadoraEdison> {
             children: [
               Container(
                   width: MediaQuery.of(context).size.height * 0.9,
-                  margin: EdgeInsets.only(top: 30.0),
-                  padding: EdgeInsets.all(30.0),
+                  margin: EdgeInsets.only(top: 20.0),
+                  padding: EdgeInsets.all(40.0),
                   color: Colors.grey,
                   height: 250,
                   child: new Text(
-                    '$valor_ingresado',
+                    '$text',
                     textAlign: TextAlign.center,
-                    style: TextStyle(fontSize: 40.0, fontFamily: 'Karla'),
+                    style: TextStyle(
+                      fontSize: 40.0,
+                    ),
                   )),
             ],
           ),
@@ -54,267 +75,160 @@ class _CalculadoraState extends State<CalculadoraEdison> {
           children: [
             Row(
               children: [
-                FloatingActionButton(
-                  heroTag: 'btn_7',
-                  onPressed: () {
-                    valor_ingresado = valor_ingresado + '7';
-                    setState(() {});
-                    //print('el contador ahora es: $contador');
-                  },
-                  child: Text(
-                    '7',
-                    style: TextStyle(fontSize: 30),
-                  ),
-                ),
-                SizedBox(
-                  width: 10,
-                ),
-                FloatingActionButton(
-                  heroTag: 'btn_8',
-                  onPressed: () {
-                    valor_ingresado = valor_ingresado + '8';
-
-                    setState(() {});
-                    //print('el contador ahora es: $contador');
-                  },
-                  child: Text(
-                    '8',
-                    style: TextStyle(fontSize: 30),
-                  ),
-                ),
-                SizedBox(
-                  width: 10,
-                ),
-                FloatingActionButton(
-                  heroTag: 'btn_9',
-                  onPressed: () {
-                    valor_ingresado = valor_ingresado + '9';
-                    setState(() {});
-                    //print('el contador ahora es: $contador');
-                  },
-                  child: Text(
-                    '9',
-                    style: TextStyle(fontSize: 30),
-                  ),
-                ),
-                SizedBox(
-                  width: 10,
-                ),
-                FloatingActionButton(
-                  onPressed: () {
-                    setState(() {});
-                    //print('el contador ahora es: $contador');
-                  },
-                  child: Text(
-                    '/',
-                    style: TextStyle(fontSize: 30),
-                  ),
-                ),
-                SizedBox(
-                  width: 10,
-                ),
+                crearBoton('7', 'btn_7'),
+                espaciadoBoton(),
+                crearBoton('8', 'btn_8'),
+                espaciadoBoton(),
+                crearBoton('9', 'btn_9'),
+                espaciadoBoton(),
+                crearBoton('/', 'btn_/'),
+                espaciadoBoton(),
               ],
             ),
-            SizedBox(
-              height: 10,
-            ),
+            espaciadoSaltos(),
             Row(
               children: [
-                FloatingActionButton(
-                  heroTag: 'btn_4',
-                  onPressed: () {
-                    valor_ingresado = valor_ingresado + '4';
-                    setState(() {});
-                    //print('el contador ahora es: $contador');
-                  },
-                  child: Text(
-                    '4',
-                    style: TextStyle(fontSize: 30),
-                  ),
-                ),
-                SizedBox(
-                  width: 10,
-                ),
-                FloatingActionButton(
-                  heroTag: 'btn_5',
-                  onPressed: () {
-                    valor_ingresado = valor_ingresado + '5';
-                    setState(() {});
-                    //print('el contador ahora es: $contador');
-                  },
-                  child: Text(
-                    '5',
-                    style: TextStyle(fontSize: 30),
-                  ),
-                ),
-                SizedBox(
-                  width: 10,
-                ),
-                FloatingActionButton(
-                  heroTag: 'btn_6',
-                  onPressed: () {
-                    valor_ingresado = valor_ingresado + '6';
-                    setState(() {});
-                    //print('el contador ahora es: $contador');
-                  },
-                  child: Text(
-                    '6',
-                    style: TextStyle(fontSize: 30),
-                  ),
-                ),
-                SizedBox(
-                  width: 10,
-                ),
-                FloatingActionButton(
-                  heroTag: 'btn_multi',
-                  onPressed: () {
-                    setState(() {});
-                    //print('el contador ahora es: $contador');
-                  },
-                  child: Text(
-                    '*',
-                    style: TextStyle(fontSize: 30),
-                  ),
-                ),
-                SizedBox(
-                  width: 10,
-                ),
+                crearBoton('4', 'btn_4'),
+                espaciadoBoton(),
+                crearBoton('5', 'btn_5'),
+                espaciadoBoton(),
+                crearBoton('6', 'btn_6'),
+                espaciadoBoton(),
+                crearBoton('*', 'btn_multi'),
+                espaciadoBoton(),
               ],
             ),
-            SizedBox(
-              height: 10,
-            ),
+            espaciadoSaltos(),
             Row(
               children: [
-                FloatingActionButton(
-                  heroTag: 'btn_1',
-                  onPressed: () {
-                    valor_ingresado = valor_ingresado + '1';
-                    setState(() {});
-                    //print('el contador ahora es: $contador');
-                  },
-                  child: Text(
-                    '1',
-                    style: TextStyle(fontSize: 30),
-                  ),
-                ),
-                SizedBox(
-                  width: 10,
-                ),
-                FloatingActionButton(
-                  heroTag: 'btn_2',
-                  onPressed: () {
-                    valor_ingresado = valor_ingresado + '2';
-                    setState(() {});
-                    //print('el contador ahora es: $contador');
-                  },
-                  child: Text(
-                    '2',
-                    style: TextStyle(fontSize: 30),
-                  ),
-                ),
-                SizedBox(
-                  width: 10,
-                ),
-                FloatingActionButton(
-                  heroTag: 'btn_3',
-                  onPressed: () {
-                    valor_ingresado = valor_ingresado + '3';
-                    setState(() {});
-                    //print('el contador ahora es: $contador');
-                  },
-                  child: Text(
-                    '3',
-                    style: TextStyle(fontSize: 30),
-                  ),
-                ),
-                SizedBox(
-                  width: 10,
-                ),
-                FloatingActionButton(
-                  heroTag: 'btn_restar',
-                  onPressed: () {
-                    setState(() {});
-                    //print('el contador ahora es: $contador');
-                  },
-                  child: Text(
-                    '-',
-                    style: TextStyle(fontSize: 30),
-                  ),
-                ),
-                SizedBox(
-                  width: 10,
-                ),
+                crearBoton('1', 'btn_1'),
+                espaciadoBoton(),
+                crearBoton('2', 'btn_2'),
+                espaciadoBoton(),
+                crearBoton('3', 'btn_3'),
+                espaciadoBoton(),
+                crearBoton('-', 'btn_restar'),
+                espaciadoBoton(),
               ],
             ),
-            SizedBox(
-              height: 10,
-            ),
+            espaciadoSaltos(),
             Row(
               children: [
-                FloatingActionButton(
-                  heroTag: 'btn_cero',
-                  onPressed: () {
-                    valor_ingresado = valor_ingresado + '0';
-                    setState(() {});
-                    //print('el contador ahora es: $contador');
-                  },
-                  child: Text(
-                    '0',
-                    style: TextStyle(fontSize: 30),
-                  ),
-                ),
-                SizedBox(
-                  width: 10,
-                ),
-                FloatingActionButton(
-                  heroTag: 'btn_punto',
-                  onPressed: () {
-                    setState(() {});
-                    //print('el contador ahora es: $contador');
-                  },
-                  child: Text(
-                    '.',
-                    style: TextStyle(fontSize: 30),
-                  ),
-                ),
-                SizedBox(
-                  width: 10,
-                ),
-                FloatingActionButton(
-                  heroTag: 'btn_igual',
-                  onPressed: () {
-                    valor_ingresado = '';
-                    setState(() {});
-                    //print('el contador ahora es: $contador');
-                  },
-                  child: Text(
-                    '=',
-                    style: TextStyle(fontSize: 30),
-                  ),
-                ),
-                SizedBox(
-                  width: 10,
-                ),
-                FloatingActionButton(
-                  heroTag: 'btn_sumar',
-                  onPressed: () {
-                    setState(() {});
-                    //print('el contador ahora es: $contador');
-                  },
-                  child: Text(
-                    '+',
-                    style: TextStyle(fontSize: 30),
-                  ),
-                ),
-                SizedBox(
-                  width: 10,
-                ),
+                crearBoton('0', 'btn_cero'),
+                espaciadoBoton(),
+                crearBoton('.', 'btn_punto'),
+                espaciadoBoton(),
+                crearBoton('=', 'btn_igual'),
+                espaciadoBoton(),
+                crearBoton('+', 'btn_sumar'),
+                espaciadoBoton(),
               ],
             ),
+            crearBoton('AC', 'btn_Ac'),
+            espaciadoBoton(),
           ],
         ),
       ),
     );
+  }
+
+  ///////////Metodo Para Calcular////////////////////////////
+  dynamic text = '0';
+  double num1 = 0;
+  double num2 = 0;
+
+  dynamic resultado = '';
+  dynamic finalResult = '';
+  dynamic opr = '';
+  dynamic preOpr = '';
+
+  void calcular(btnText) {
+    if (btnText == 'AC') {
+      text = '0';
+      num1 = 0;
+      num2 = 0;
+      resultado = '';
+      finalResult = '0';
+      opr = '';
+      preOpr = '';
+    } else if (opr == '=' && btnText == '=') {
+      if (preOpr == '+') {
+        finalResult = mSuma();
+      } else if (preOpr == '-') {
+        finalResult = mResta();
+      } else if (preOpr == '*') {
+        finalResult = mMult();
+      } else if (preOpr == '/') {
+        finalResult = mDiv();
+      }
+    } else if (btnText == '+' ||
+        btnText == '-' ||
+        btnText == '*' ||
+        btnText == '/' ||
+        btnText == '=') {
+      if (num1 == 0) {
+        num1 = double.parse(resultado);
+      } else {
+        num2 = double.parse(resultado);
+      }
+
+      if (opr == '+') {
+        finalResult = mSuma();
+      } else if (opr == '-') {
+        finalResult = mResta();
+      } else if (opr == '*') {
+        finalResult = mMult();
+      } else if (opr == '/') {
+        finalResult = mDiv();
+      }
+      preOpr = opr;
+      opr = btnText;
+      resultado = '';
+    } else if (btnText == '.') {
+      if (!resultado.toString().contains('.')) {
+        resultado = resultado.toString() + '.';
+      }
+      finalResult = resultado;
+    } else {
+      resultado = resultado + btnText;
+      finalResult = resultado;
+    }
+
+    setState(() {
+      text = finalResult;
+    });
+  }
+
+  String mSuma() {
+    resultado = (num1 + num2).toString();
+    num1 = double.parse(resultado);
+    return contDecimales(resultado);
+  }
+
+  String mResta() {
+    resultado = (num1 - num2).toString();
+    num1 = double.parse(resultado);
+    return contDecimales(resultado);
+  }
+
+  String mMult() {
+    resultado = (num1 * num2).toString();
+    num1 = double.parse(resultado);
+    return contDecimales(resultado);
+  }
+
+  String mDiv() {
+    resultado = (num1 / num2).toString();
+    num1 = double.parse(resultado);
+    return contDecimales(resultado);
+  }
+
+  String contDecimales(dynamic result) {
+    if (result.toString().contains('.')) {
+      List<String> splitDecimal = result.toString().split('.');
+      if (!(int.parse(splitDecimal[1]) > 0))
+        return result = splitDecimal[0].toString();
+    }
+    return result;
   }
 }
