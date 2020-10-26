@@ -78,6 +78,7 @@ class _CalculadoraLinaState extends State<CalculadoraLina> {
 
   @override
   Widget build(BuildContext context) {
+    print('Se redibuja');
     return new Scaffold(
         appBar: new AppBar(),
         body: new Container(

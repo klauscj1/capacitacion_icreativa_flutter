@@ -1,3 +1,4 @@
+import 'package:clase_2/ui/pages/bloc_page.dart';
 import 'package:clase_2/ui/pages/calculador_menu.dart';
 import 'package:clase_2/ui/pages/con_estado.dart';
 import 'package:clase_2/ui/pages/container_page.dart';
@@ -61,6 +62,12 @@ class MenuPage extends StatelessWidget {
               leading: 'CA',
               titulo: 'Calculadoras ',
               subtitulo: 'Tarea 1',
+            ),
+            MenuItem(
+              pagina: BlocPage(),
+              leading: 'BP',
+              titulo: 'Bloc Page ',
+              subtitulo: 'Ejemplo basico de bloc page',
             ),
           ],
         ),
