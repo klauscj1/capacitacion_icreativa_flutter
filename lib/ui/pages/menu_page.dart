@@ -2,6 +2,7 @@ import 'package:clase_2/ui/pages/bloc_page.dart';
 import 'package:clase_2/ui/pages/calculador_menu.dart';
 import 'package:clase_2/ui/pages/con_estado.dart';
 import 'package:clase_2/ui/pages/container_page.dart';
+import 'package:clase_2/ui/pages/formulario_page.dart';
 import 'package:clase_2/ui/pages/home_page.dart';
 import 'package:clase_2/ui/pages/list_page.dart';
 import 'package:clase_2/ui/pages/lista_page.dart';
@@ -75,6 +76,12 @@ class MenuPage extends StatelessWidget {
               leading: 'TP',
               titulo: 'TextField widget ',
               subtitulo: 'Ejemplo basico textfield',
+            ),
+            MenuItem(
+              pagina: FormulariosPage(),
+              leading: 'FP',
+              titulo: 'Formularios widget ',
+              subtitulo: 'Ejemplo basico de formularios',
             ),
           ],
         ),
