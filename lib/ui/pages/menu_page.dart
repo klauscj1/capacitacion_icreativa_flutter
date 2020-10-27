@@ -6,6 +6,7 @@ import 'package:clase_2/ui/pages/home_page.dart';
 import 'package:clase_2/ui/pages/list_page.dart';
 import 'package:clase_2/ui/pages/lista_page.dart';
 import 'package:clase_2/ui/pages/sin_estado.dart';
+import 'package:clase_2/ui/pages/textfield_page.dart';
 import 'package:clase_2/ui/widgets/menu_item_widget.dart';
 import 'package:flutter/material.dart';
 
@@ -68,6 +69,12 @@ class MenuPage extends StatelessWidget {
               leading: 'BP',
               titulo: 'Bloc Page ',
               subtitulo: 'Ejemplo basico de bloc page',
+            ),
+            MenuItem(
+              pagina: TextFieldPage(),
+              leading: 'TP',
+              titulo: 'TextField widget ',
+              subtitulo: 'Ejemplo basico textfield',
             ),
           ],
         ),

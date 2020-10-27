@@ -2,8 +2,10 @@ import 'package:clase_2/bloc/bloc_page_bloc.dart';
 import 'package:flutter/material.dart';
 
 class Provider extends InheritedWidget {
-  static Provider _instancia;
   final contadorBloc = BlocPageBloc();
+
+  //patron singleton
+  static Provider _instancia;
 
   factory Provider({Key key, Widget child}) {
     if (_instancia == null) {

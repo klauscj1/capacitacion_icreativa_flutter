@@ -7,7 +7,7 @@ class BlocPage extends StatelessWidget {
   Widget build(BuildContext context) {
     print('se redibuja');
     final bloc = Provider.getContadorBloc(context);
-    bloc.cambiarContador(0);
+    //bloc.cambiarContador(0);
     return Scaffold(
       appBar: AppBar(
         title: Text('Bloc page'),
@@ -26,7 +26,7 @@ class BlocPage extends StatelessWidget {
     return Center(
       child: StreamBuilder(
         stream: bloc.contadorStream,
-        //initialData: 0,
+        initialData: 0,
         builder: (BuildContext context, AsyncSnapshot<int> snapshot) {
           if (snapshot.hasError) {
             return Text('Error');
