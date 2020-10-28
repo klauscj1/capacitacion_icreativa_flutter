@@ -3,6 +3,7 @@ import 'package:clase_2/ui/pages/calculadora_claus.dart';
 import 'package:clase_2/ui/pages/calculadora_gabriel.dart';
 import 'package:clase_2/ui/pages/calculadora_jorge.dart';
 import 'package:clase_2/ui/pages/calculadora_lina.dart';
+import 'package:clase_2/ui/pages/formulario_jorge.dart';
 import 'package:clase_2/ui/widgets/menu_item_widget.dart';
 import 'package:flutter/material.dart';
 
@@ -39,8 +40,8 @@ class FormulariosPage extends StatelessWidget {
               subtitulo: 'Edisson Vargas',
             ),
             MenuItem(
-              pagina: CalculadoraJorge(),
-              leading: 'JA',
+              pagina: FormularioJorge(),
+              leading: 'JRAP',
               titulo: 'Jorge Arevalo',
               subtitulo: 'Jorge Arevalo',
             ),
