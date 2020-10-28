@@ -1,9 +1,9 @@
 import 'package:clase_2/ui/pages/calculadora_Edi.dart';
-import 'package:clase_2/ui/pages/calculadora_gabriel.dart';
 import 'package:clase_2/ui/pages/calculadora_jorge.dart';
 import 'package:clase_2/ui/pages/formulario_lina.dart';
 import 'package:clase_2/ui/pages/formulario_claus.dart';
 import 'package:clase_2/ui/widgets/menu_item_widget.dart';
+import 'package:clase_2/ui/pages/formulario_Gabriel.dart';
 import 'package:flutter/material.dart';
 
 class FormulariosPage extends StatelessWidget {
@@ -27,9 +27,9 @@ class FormulariosPage extends StatelessWidget {
               subtitulo: 'Lina Orellana',
             ),
             MenuItem(
-              pagina: CalculadoraGabriel(),
-              leading: 'GC',
-              titulo: 'Gabriel Cuenca',
+              pagina: FormularioGabriel(),
+              leading: 'FG',
+              titulo: 'Formulario Gabriel',
               subtitulo: 'Gabriel Cuenca',
             ),
             MenuItem(
