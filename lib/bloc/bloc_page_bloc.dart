@@ -15,8 +15,27 @@ class BlocPageBloc {
   Function(String) get cambiarNombre => _nombreController.sink.add;
   String get nombre => _nombreController.value;
 
+  final _nickController = BehaviorSubject<String>();
+  Stream<String> get nickStream => _nickController.stream;
+  Function(String) get cambiarNick => _nickController.sink.add;
+  String get nick => _nickController.value;
+
+  final _emailController = BehaviorSubject<String>();
+  Stream<String> get emailStream => _emailController.stream;
+  Function(String) get cambiarEmail => _emailController.sink.add;
+  String get email => _emailController.value;
+
+  final _passController = BehaviorSubject<String>();
+  Stream<String> get passStream => _passController.stream;
+  Function(String) get cambiarPass => _passController.sink.add;
+  String get pass => _passController.value;
+
   dispose() {
     _contadorController?.close();
     _nombreController?.close();
+
+    _nickController?.close();
+    _emailController?.close();
+    _passController?.close();
   }
 }
