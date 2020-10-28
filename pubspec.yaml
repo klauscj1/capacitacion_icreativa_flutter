@@ -30,7 +30,10 @@ dependencies:
   math_expressions: ^2.0.1
   rxdart: ^0.24.1
   email_validator: '^1.0.5'
+  frino_icons: ^1.0.1
 
+
+  
 dev_dependencies:
   flutter_test:
     sdk: flutter
