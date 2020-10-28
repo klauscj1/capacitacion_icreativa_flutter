@@ -8,14 +8,6 @@ class FormularioJorge extends StatefulWidget {
   _FormularioJorgeState createState() => _FormularioJorgeState();
 }
 
-/*bool validateEmail(String value) {
-  //print(value);
-  Pattern pattern =
-      r'^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$';
-  RegExp regex = new RegExp(pattern);
-  return (!regex.hasMatch(value)) ? false : true;
-}*/
-
 String validateEmails(String value) {
   String pattern =
       r'^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$';
@@ -29,13 +21,6 @@ String validateEmails(String value) {
   }
 }
 
-formItemsDesign(icon, item) {
-  return Padding(
-    padding: EdgeInsets.symmetric(vertical: 7),
-    child: Card(child: ListTile(leading: Icon(icon), title: item)),
-  );
-}
-
 class _FormularioJorgeState extends State<FormularioJorge> {
   TextEditingController _nombreController = TextEditingController();
   TextEditingController _correoelectronico = TextEditingController();
@@ -44,7 +29,6 @@ class _FormularioJorgeState extends State<FormularioJorge> {
 
   @override
   Widget build(BuildContext context) {
-    final bloc = Provider.getContadorBloc(context);
     return Scaffold(
       appBar: AppBar(
         title: Text('Formulario Jorge'),
@@ -131,7 +115,8 @@ class _FormularioJorgeState extends State<FormularioJorge> {
                 print(validateEmails(value));
                 String res = validateEmails(value);
 
-                if (_contrasenaController.text == _contrasena2Controller.text && res ==  null) {
+                if (_contrasenaController.text == _contrasena2Controller.text &&
+                    res == null) {
                   showDialog(
                       barrierDismissible: false,
                       context: context,

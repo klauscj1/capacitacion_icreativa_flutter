@@ -46,8 +46,7 @@ class _FormularioLinaState extends State<FormularioLina> {
                   controller: _apellidoController,
                   keyboardType: TextInputType.text,
                   decoration: InputDecoration(
-                      hintText: 'Apellido',
-                      icon: Icon(Icons.account_box_outlined)),
+                      hintText: 'Apellido', icon: Icon(Icons.account_box)),
                   style: TextStyle(fontWeight: FontWeight.bold),
                   onChanged: (value) {
                     print(value);
@@ -122,6 +121,7 @@ class _FormularioLinaState extends State<FormularioLina> {
                               content: Row(
                                 children: [
                                   Column(
+                                    mainAxisSize: MainAxisSize.min,
                                     children: [
                                       Text('Nombre: ${_nombreController.text}'),
                                       //SizedBox(width: 20),
@@ -167,6 +167,7 @@ class _FormularioLinaState extends State<FormularioLina> {
                               content: Row(
                                 children: [
                                   Column(
+                                    mainAxisSize: MainAxisSize.min,
                                     children: [
                                       Icon(
                                         Icons.close,
